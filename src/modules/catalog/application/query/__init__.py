@@ -1,3 +1,2 @@
 from .get_all_listings import GetAllListings
 from .get_listing_details import GetListingDetails
-from .get_listings_of_seller import GetListingsOfSeller
