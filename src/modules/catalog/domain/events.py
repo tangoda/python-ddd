@@ -8,13 +8,3 @@ class ListingDraftCreatedEvent(DomainEvent):
 
 class ListingDraftUpdatedEvent(DomainEvent):
     listing_id: GenericUUID
-
-
-class ListingDraftDeletedEvent(DomainEvent):
-    listing_id: GenericUUID
-
-
-class ListingPublishedEvent(DomainEvent):
-    listing_id: GenericUUID
-    seller_id: GenericUUID
-    ask_price: Money

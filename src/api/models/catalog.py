@@ -19,10 +19,6 @@ class ListingWriteModel(BaseModel):
     ask_price_currency: str = "USD"
 
 
-class ListingPublishModel(BaseModel):
-    id: UUID
-
-
 class ListingReadModel(BaseModel):
     id: UUID
     title: str = ""

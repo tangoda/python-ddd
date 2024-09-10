@@ -7,7 +7,6 @@ from modules.catalog.application.command.create_listing_draft import (
     CreateListingDraftCommand,
     create_listing_draft,
 )
-from modules.catalog.domain.entities import Seller
 from seedwork.domain.value_objects import Money
 from seedwork.infrastructure.repository import InMemoryRepository
 from seedwork.tests.application.test_utils import FakeEventPublisher
@@ -21,7 +20,7 @@ def test_create_listing_draft():
         title="foo",
         description="bar",
         ask_price=Money(1),
-        seller_id=Seller.next_id(),
+        seller_id=GenericUUID.next_id(),
     )
     publish = FakeEventPublisher()
     repository = InMemoryRepository()

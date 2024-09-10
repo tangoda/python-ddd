@@ -2,7 +2,6 @@ import pytest
 
 from modules.catalog.application.command import (
     CreateListingDraftCommand,
-    PublishListingDraftCommand,
 )
 from seedwork.domain.value_objects import GenericUUID, Money
 
@@ -129,29 +128,4 @@ def test_catalog_publish_listing_draft(app, authenticated_api_client):
     response = authenticated_api_client.post(f"/catalog/{listing_id}/publish")
 
     # assert that the listing was published
-    assert response.status_code == 200
-
-
-def test_published_listing_appears_in_biddings(app, authenticated_api_client):
-    # arrange
-    listing_id = GenericUUID(int=1)
-    current_user = authenticated_api_client.current_user
-    app.execute(
-        CreateListingDraftCommand(
-            listing_id=listing_id,
-            title="Listing to be published",
-            description="...",
-            ask_price=Money(10),
-            seller_id=current_user.id,
-        )
-    )
-    app.execute(
-        PublishListingDraftCommand(
-            listing_id=listing_id,
-            seller_id=current_user.id,
-        )
-    )
-
-    url = f"/bidding/{listing_id}"
-    response = authenticated_api_client.get(url)
     assert response.status_code == 200

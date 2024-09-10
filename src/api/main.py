@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from api.dependencies import oauth2_scheme  # noqa
-from api.routers import bidding, catalog, diagnostics, iam
+from api.routers import catalog, diagnostics, iam
 from config.api_config import ApiConfig
 from config.container import create_application, ApplicationContainer
 from seedwork.domain.exceptions import DomainException, EntityNotFoundException
@@ -25,7 +25,6 @@ logger.info("setup complete")
 app = FastAPI(debug=config.DEBUG)
 
 app.include_router(catalog.router)
-app.include_router(bidding.router)
 app.include_router(iam.router)
 app.include_router(diagnostics.router)
 app.container = container

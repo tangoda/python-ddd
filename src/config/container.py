@@ -14,10 +14,6 @@ from sqlalchemy.orm import Session
 from lato import Application, TransactionContext, DependencyProvider
 import copy
 
-from modules.bidding.application import bidding_module
-from modules.bidding.infrastructure.listing_repository import (
-    PostgresJsonListingRepository as BiddingPostgresJsonListingRepository,
-)
 from modules.catalog.application import catalog_module
 from modules.catalog.infrastructure.listing_repository import (
     PostgresJsonListingRepository as CatalogPostgresJsonListingRepository,
@@ -55,12 +51,11 @@ def create_db_engine(config):
 def create_application(db_engine) -> Application:
     """Creates new instance of the application"""
     application = Application(
-        "BiddingApp",
+        "CatalogApp",
         app_version=0.1,
         db_engine=db_engine,
     )
     application.include_submodule(catalog_module)
-    application.include_submodule(bidding_module)
 
     @application.on_create_transaction_context
     def on_create_transaction_context(**kwargs):
@@ -154,11 +149,6 @@ class TransactionContainer(containers.DeclarativeContainer):
 
     catalog_listing_repository = providers.Singleton(
         CatalogPostgresJsonListingRepository,
-        db_session=db_session,
-    )
-
-    bidding_listing_repository = providers.Singleton(
-        BiddingPostgresJsonListingRepository,
         db_session=db_session,
     )
 
