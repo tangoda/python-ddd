@@ -1,6 +1,6 @@
 import pytest
 
-from seedwork.domain.value_objects import Money
+from seedwork.utils.common_types import Money
 
 
 @pytest.mark.unit

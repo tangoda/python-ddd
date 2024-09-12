@@ -3,7 +3,7 @@ import pytest
 from modules.catalog.application.command import (
     CreateListingDraftCommand,
 )
-from seedwork.domain.value_objects import GenericUUID, Money
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 
 @pytest.mark.integration

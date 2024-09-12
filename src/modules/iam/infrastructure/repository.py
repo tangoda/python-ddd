@@ -7,7 +7,7 @@ from sqlalchemy.sql.schema import Column
 
 from modules.iam.application.repository import UserRepository
 from modules.iam.application.services import User
-from seedwork.domain.value_objects import Email
+from seedwork.utils.common_types import Email
 from seedwork.infrastructure.database import Base
 from seedwork.infrastructure.json_data_mapper import JSONDataMapper
 from seedwork.infrastructure.repository import SqlAlchemyGenericRepository

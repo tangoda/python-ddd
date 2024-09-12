@@ -3,7 +3,7 @@ from dataclasses import dataclass, field
 from typing import Any, Optional
 
 from seedwork.domain.type_hints import DomainEvent
-from seedwork.domain.value_objects import GenericUUID
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 
 @dataclass

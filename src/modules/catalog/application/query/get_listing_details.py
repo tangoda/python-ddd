@@ -7,7 +7,7 @@ from modules.catalog.application.query.model_mappers import map_listing_model_to
 from modules.catalog.infrastructure.listing_repository import ListingModel
 from seedwork.application.queries import Query
 from seedwork.application.query_handlers import QueryResult
-from seedwork.domain.value_objects import GenericUUID
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 
 class GetListingDetails(Query):

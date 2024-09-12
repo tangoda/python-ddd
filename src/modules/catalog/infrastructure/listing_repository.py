@@ -7,7 +7,7 @@ from sqlalchemy_utils import UUIDType
 
 from modules.catalog.domain.entities import Listing
 from modules.catalog.domain.repositories import ListingRepository
-from seedwork.domain.value_objects import GenericUUID, Money
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 from seedwork.infrastructure.data_mapper import DataMapper
 from seedwork.infrastructure.database import Base
 from seedwork.infrastructure.repository import SqlAlchemyGenericRepository

@@ -1,5 +1,5 @@
 from seedwork.domain.events import DomainEvent
-from seedwork.domain.value_objects import GenericUUID, Money
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 
 class ListingDraftCreatedEvent(DomainEvent):

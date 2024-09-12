@@ -2,7 +2,7 @@ import abc
 from typing import Generic, TypeVar
 
 from seedwork.domain.entities import Entity as DomainEntity
-from seedwork.domain.value_objects import GenericUUID
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 Entity = TypeVar("Entity", bound=DomainEntity)
 EntityId = TypeVar("EntityId", bound=GenericUUID)

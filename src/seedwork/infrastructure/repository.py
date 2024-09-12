@@ -6,7 +6,7 @@ from seedwork.domain.entities import Entity
 from seedwork.domain.events import DomainEvent
 from seedwork.domain.exceptions import EntityNotFoundException
 from seedwork.domain.repositories import GenericRepository
-from seedwork.domain.value_objects import GenericUUID
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 from seedwork.infrastructure.data_mapper import DataMapper
 from seedwork.infrastructure.database import Base
 

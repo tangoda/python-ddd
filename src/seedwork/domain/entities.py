@@ -3,7 +3,7 @@ from typing import Generic, TypeVar
 
 from seedwork.domain.events import DomainEvent
 from seedwork.domain.mixins import BusinessRuleValidationMixin
-from seedwork.domain.value_objects import GenericUUID
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 EntityId = TypeVar("EntityId", bound=GenericUUID)
 

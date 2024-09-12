@@ -1,13 +1,9 @@
-from dataclasses import dataclass
-
 from modules.catalog.application import catalog_module
 from modules.catalog.domain.entities import Listing
 from modules.catalog.domain.events import ListingDraftCreatedEvent
 from modules.catalog.domain.repositories import ListingRepository
-from seedwork.application.command_handlers import CommandResult
-from lato import Command, TransactionContext
-from seedwork.domain.value_objects import GenericUUID, Money
-
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
+from lato import Command
 
 class CreateListingDraftCommand(Command):
     """A command for creating new listing in draft state"""

@@ -1,7 +1,7 @@
 import pytest
 
 from modules.iam.application.services import IamService
-from seedwork.domain.value_objects import GenericUUID
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 
 @pytest.mark.integration

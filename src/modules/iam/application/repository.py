@@ -2,7 +2,7 @@ from abc import abstractmethod
 
 from modules.iam.application.services import User
 from seedwork.domain.repositories import GenericRepository
-from seedwork.domain.value_objects import Email, GenericUUID
+from seedwork.utils.common_types import Email, GenericUUID
 
 
 class UserRepository(GenericRepository[GenericUUID, User]):

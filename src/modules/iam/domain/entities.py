@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 from seedwork.domain.entities import AggregateRoot
-from seedwork.domain.value_objects import Email, GenericUUID
+from seedwork.utils.common_types import Email, GenericUUID
 
 UserId = GenericUUID
 

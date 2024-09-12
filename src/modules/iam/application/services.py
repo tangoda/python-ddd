@@ -2,7 +2,7 @@ import bcrypt
 
 from modules.iam.application.exceptions import InvalidCredentialsException
 from modules.iam.domain.entities import User
-from seedwork.domain.value_objects import Email
+from seedwork.utils.common_types import Email
 
 
 class IamService:

@@ -1,5 +1,5 @@
 from uuid import UUID
-from seedwork.domain.value_objects import GenericUUID
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 import pytest
 
@@ -7,7 +7,7 @@ from modules.catalog.application.command.create_listing_draft import (
     CreateListingDraftCommand,
     create_listing_draft,
 )
-from seedwork.domain.value_objects import Money
+from seedwork.utils.common_types import Money
 from seedwork.infrastructure.repository import InMemoryRepository
 from seedwork.tests.application.test_utils import FakeEventPublisher
 

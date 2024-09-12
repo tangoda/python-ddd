@@ -5,7 +5,7 @@ from typing import Any
 from pydantic import BaseModel
 
 from seedwork.domain.type_hints import DomainEvent
-from seedwork.domain.value_objects import GenericUUID
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 
 class EventId(GenericUUID):

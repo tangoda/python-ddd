@@ -11,7 +11,7 @@ from modules.catalog.application.command import (
 )
 from modules.catalog.application.query.get_all_listings import GetAllListings
 from modules.catalog.application.query.get_listing_details import GetListingDetails
-from seedwork.domain.value_objects import GenericUUID, Money
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 
 """
 Inspired by https://developer.ebay.com/api-docs/sell/inventory/resources/offer/methods/createOffer

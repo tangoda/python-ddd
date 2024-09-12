@@ -5,7 +5,7 @@ from modules.catalog.application.command.update_listing_draft import (
     update_listing_draft,
 )
 from modules.catalog.domain.entities import Listing
-from seedwork.domain.value_objects import GenericUUID, Money
+from seedwork.utils.common_types import GenericUUID, Money, UUID, datetime, Decimal
 from seedwork.infrastructure.repository import InMemoryRepository
 
 
